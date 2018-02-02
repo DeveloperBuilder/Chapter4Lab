@@ -11,7 +11,7 @@ namespace Chapter4Lab
         static void Main(string[] args)
         {
             // Create a console application and declare age and name variables of three peoples. 
-            // Performthe following operations on them:
+            // Perform the following operations on them:
             // 1. Using a ternary operator, print who is older between two people.
             // 2. Using comparison and logical operators, evaluate and print who is the oldest and the youngest in the group of three.
             var henkAge = 14;
@@ -49,7 +49,6 @@ namespace Chapter4Lab
             {
                 Console.WriteLine("The youngest of the three is keesAge");
             }
-            Console.ReadLine();
         }
     }
 }
