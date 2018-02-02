@@ -30,6 +30,7 @@ namespace Chapter4Lab
                 Console.WriteLine("The oldest of the three is keesAge");
             }
             Youngest();
+            Ternary();
             Console.ReadLine();
         }
         static void Youngest()
@@ -48,6 +49,24 @@ namespace Chapter4Lab
             else if ((keesAge < henkAge) && (keesAge < janAge))
             {
                 Console.WriteLine("The youngest of the three is keesAge");
+            }
+        }
+        static void Ternary()
+        {
+            var henkAge = 14;
+            var janAge = 37;
+            var keesAge = 66;
+            if ((henkAge > janAge) || (henkAge > keesAge))
+            {
+                Console.WriteLine("The older of the two is henkAge");
+            }
+            else if ((janAge > henkAge) || (janAge > keesAge))
+            {
+                Console.WriteLine("The older of the two is janAge");
+            }
+            else if ((keesAge > henkAge) || (keesAge > janAge))
+            {
+                Console.WriteLine("The older of the two is keesAge");
             }
         }
     }
