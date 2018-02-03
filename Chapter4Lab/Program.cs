@@ -56,17 +56,14 @@ namespace Chapter4Lab
             var henkAge = 14;
             var janAge = 37;
             var keesAge = 66;
-            if ((henkAge > janAge) || (henkAge > keesAge))
+            var result = henkAge > janAge ? "The older of the two is henkAge" : "The older of the two is janAge";
+            var result1 = henkAge > keesAge ? "The older of the two is henkAge" : "The older of the two is keesAge";
+            var result2 = janAge > henkAge ? "The older of the two is janAge" : "The older of the two is henkAge";
+            var result3 = janAge > keesAge ? "The older of the two is janAge" : "The older of the two is keesAge";
+            var result4 = keesAge > henkAge ? "The older of the two is keesAge" : "The older of the two is henkAge";
+            var result5 = keesAge > janAge ? "The older of the two is keesAge" : "The older of the two is janAge";
             {
-                Console.WriteLine("The older of the two is henkAge");
-            }
-            else if ((janAge > henkAge) || (janAge > keesAge))
-            {
-                Console.WriteLine("The older of the two is janAge");
-            }
-            else if ((keesAge > henkAge) || (keesAge > janAge))
-            {
-                Console.WriteLine("The older of the two is keesAge");
+                Console.WriteLine(result + "\n" + result1 + "\n" + result2 + "\n" + result3 + "\n" + result4 + "\n" + result5);
             }
         }
     }
