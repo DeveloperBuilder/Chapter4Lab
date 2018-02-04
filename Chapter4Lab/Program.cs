@@ -73,8 +73,8 @@ namespace Chapter4Lab
         {
             if ((age1 > age2) && (age1 > age3))
                 {
-                    Console.WriteLine("The oldest of the three is {0}", age1);
-                }
+                Console.WriteLine("The oldest of the three is {0}", age1);
+            }
             else if ((age2 > age1) && (age2 > age3))
                 {
                     Console.WriteLine("The oldest of the three is {1}", age2);
