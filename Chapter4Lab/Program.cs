@@ -103,15 +103,5 @@ namespace Chapter4Lab
                 Console.WriteLine("The youngest of the three is Kees");
             }
         }
-
-        internal static void Youngest()
-        {
-            throw new NotImplementedException();
-        }
-
-        internal static void Oldest()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
