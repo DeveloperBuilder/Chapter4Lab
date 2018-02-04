@@ -14,6 +14,7 @@ namespace Chapter4Lab
             // Perform the following operations on them:
             // 1. Using a ternary operator, print who is older between two people.
             // 2. Using comparison and logical operators, evaluate and print who is the oldest and the youngest in the group of three.
+
             Person person1 = new Person();
             Person person2 = new Person();
             Person person3 = new Person();
@@ -44,6 +45,8 @@ namespace Chapter4Lab
             {
                 Console.WriteLine(person2.Name + " is jonger dan of even oud als " + person3.Name);
             }
+            Person.Oldest();
+            Person.Youngest();
             Console.ReadLine();
         }
     }
@@ -69,35 +72,35 @@ namespace Chapter4Lab
             return (age1 > age2) ? true : false; // ternary operator
         }
 
-        public static bool Oldest(int age1, int age2, int age3)
+        public static void Oldest(int age1, int age2, int age3)
         {
             if ((age1 > age2) && (age1 > age3))
             {
-                Console.WriteLine("The oldest of the three is {0}", age1);
+                Console.WriteLine("The oldest of the three is Henk");
             }
             else if ((age2 > age1) && (age2 > age3))
             {
-                Console.WriteLine("The oldest of the three is {1}", age2);
+                Console.WriteLine("The oldest of the three is Jan");
             }
             else if ((age3 > age1) && (age3 > age2))
             {
-                Console.WriteLine("The oldest of the three is {3}", age3);
+                Console.WriteLine("The oldest of the three is Kees");
             }
         }
 
-        public static bool Youngest(int age1, int age2, int age3)
+        public static void Youngest(int age1, int age2, int age3)
         {
             if ((age1 > age2) && (age1 > age3))
             {
-                Console.WriteLine("The youngest of the three is {4} ", age1);
+                Console.WriteLine("The youngest of the three is Henk");
             }
             else if ((age2 > age1) && (age2 > age3))
             {
-                Console.WriteLine("The youngest of the three is {5}", age2);
+                Console.WriteLine("The youngest of the three is Jan");
             }
             else if ((age3 > age1) && (age3 > age2))
             {
-                Console.WriteLine("The youngest of the three is {6}", age3);
+                Console.WriteLine("The youngest of the three is Kees");
             }
         }
     }
