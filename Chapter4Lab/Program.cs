@@ -45,8 +45,6 @@ namespace Chapter4Lab
             {
                 Console.WriteLine(person2.Name + " is jonger dan of even oud als " + person3.Name);
             }
-            Person.Oldest();
-            Person.Youngest();
             Console.ReadLine();
         }
     }
@@ -72,35 +70,35 @@ namespace Chapter4Lab
             return (age1 > age2) ? true : false; // ternary operator
         }
 
-        public static void Oldest(int age1, int age2, int age3)
+        public static bool Oldest(int age1, int age2, int age3)
         {
             if ((age1 > age2) && (age1 > age3))
             {
-                Console.WriteLine("The oldest of the three is Henk");
+                return age1;
             }
             else if ((age2 > age1) && (age2 > age3))
             {
-                Console.WriteLine("The oldest of the three is Jan");
+                return age2;
             }
             else if ((age3 > age1) && (age3 > age2))
             {
-                Console.WriteLine("The oldest of the three is Kees");
+                return age3;
             }
         }
 
-        public static void Youngest(int age1, int age2, int age3)
+        public static bool Youngest(int age1, int age2, int age3)
         {
             if ((age1 > age2) && (age1 > age3))
             {
-                Console.WriteLine("The youngest of the three is Henk");
+                return age1;
             }
             else if ((age2 > age1) && (age2 > age3))
             {
-                Console.WriteLine("The youngest of the three is Jan");
+                return age2;
             }
             else if ((age3 > age1) && (age3 > age2))
             {
-                Console.WriteLine("The youngest of the three is Kees");
+                return age3;
             }
         }
     }
