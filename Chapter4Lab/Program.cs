@@ -45,6 +45,8 @@ namespace Chapter4Lab
             {
                 Console.WriteLine(person2.Name + " is jonger dan of even oud als " + person3.Name);
             }
+            Console.WriteLine("Van " + person1.Name + ", " + person2.Name + " en " + person3.Name + " is " + Person.Oldest(person1, person2, person3).Name + " de oudste.");
+            Console.WriteLine("Van " + person1.Name + ", " + person2.Name + " en " + person3.Name + " is " + Person.Youngest(person1, person2, person3).Name + " de jongste.");
             Console.ReadLine();
         }
     }
@@ -70,35 +72,55 @@ namespace Chapter4Lab
             return (age1 > age2) ? true : false; // ternary operator
         }
 
-        public static bool Oldest(int age1, int age2, int age3)
+        public static Person Oldest(Person person1, Person person2, Person person3)
         {
-            if ((age1 > age2) && (age1 > age3))
+            if (Older(person1.Age, person2.Age))
             {
-                return age1;
+                if (Older(person1.Age, person3.Age))
+                {
+                    return person1;
+                }
+                else
+                {
+                    return person3;
+                }
             }
-            else if ((age2 > age1) && (age2 > age3))
+            else
             {
-                return age2;
-            }
-            else if ((age3 > age1) && (age3 > age2))
-            {
-                return age3;
+                if (Older(person2.Age, person3.Age))
+                {
+                    return person2;
+                }
+                else
+                {
+                    return person3;
+                }
             }
         }
 
-        public static bool Youngest(int age1, int age2, int age3)
+        public static Person Youngest(Person person1, Person person2, Person person3)
         {
-            if ((age1 > age2) && (age1 > age3))
+            if (Older(person1.Age, person2.Age))
             {
-                return age1;
+                if (Older(person3.Age, person2.Age))
+                {
+                    return person2;
+                }
+                else
+                {
+                    return person3;
+                }
             }
-            else if ((age2 > age1) && (age2 > age3))
+            else
             {
-                return age2;
-            }
-            else if ((age3 > age1) && (age3 > age2))
-            {
-                return age3;
+                if (Older(person3.Age, person2.Age))
+                {
+                    return person2;
+                }
+                else
+                {
+                    return person3;
+                }
             }
         }
     }
